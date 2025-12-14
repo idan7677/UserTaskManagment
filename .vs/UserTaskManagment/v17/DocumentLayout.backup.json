@@ -1,0 +1,284 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\validators\\createusertaskdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:validators\\createusertaskdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\validators\\createtagdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:validators\\createtagdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\models\\dtos\\tagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:models\\dtos\\tagdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\data\\repositories\\usertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:data\\repositories\\usertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\data\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:data\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\services\\backgroundservices\\taskreminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:services\\backgroundservices\\taskreminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\services\\usertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:services\\usertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\usertaskmanagment.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:usertaskmanagment.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateUserTaskDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Validators\\CreateUserTaskDtoValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\CreateUserTaskDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Validators\\CreateUserTaskDtoValidator.cs",
+              "RelativeToolTip": "Validators\\CreateUserTaskDtoValidator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T10:42:09.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserTaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\Repositories\\UserTaskRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\UserTaskRepository.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\Repositories\\UserTaskRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\UserTaskRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T22:38:03.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TagDto.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Models\\DTOs\\TagDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\TagDto.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Models\\DTOs\\TagDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\TagDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAewBIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T22:37:01.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\Repositories\\TagRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\TagRepository.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\Repositories\\TagRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\TagRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T22:10:06.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TagsController.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Controllers\\TagsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TagsController.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Controllers\\TagsController.cs",
+              "RelativeToolTip": "Controllers\\TagsController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwDwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T19:02:10.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TaskReminderService.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Services\\BackgroundServices\\TaskReminderService.cs",
+              "RelativeDocumentMoniker": "Services\\BackgroundServices\\TaskReminderService.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Services\\BackgroundServices\\TaskReminderService.cs",
+              "RelativeToolTip": "Services\\BackgroundServices\\TaskReminderService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:35:32.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:35:05.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Data\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\UnitOfWork.cs",
+              "RelativeToolTip": "Data\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:34:17.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserTasksController.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Controllers\\UserTasksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserTasksController.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Controllers\\UserTasksController.cs",
+              "RelativeToolTip": "Controllers\\UserTasksController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:24:05.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-10T21:00:12.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateTagDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Validators\\CreateTagDtoValidator.cs",
+              "RelativeDocumentMoniker": "Validators\\CreateTagDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Validators\\CreateTagDtoValidator.cs",
+              "RelativeToolTip": "Validators\\CreateTagDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T10:41:48.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserTaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Services\\UserTaskService.cs",
+              "RelativeDocumentMoniker": "Services\\UserTaskService.cs",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Services\\UserTaskService.cs",
+              "RelativeToolTip": "Services\\UserTaskService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T17:30:13.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserTaskManagment.http",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\UserTaskManagment.http",
+              "RelativeDocumentMoniker": "UserTaskManagment.http",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\UserTaskManagment.http",
+              "RelativeToolTip": "UserTaskManagment.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-12-10T21:00:36.713Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

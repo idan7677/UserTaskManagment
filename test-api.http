@@ -1,0 +1,57 @@
+### Get all tasks
+GET https://localhost:7000/api/usertasks
+Accept: application/json
+
+### Get all tags
+GET https://localhost:7000/api/tags
+Accept: application/json
+
+### Get tasks with multiple tags
+GET https://localhost:7000/api/usertasks/with-multiple-tags
+Accept: application/json
+
+### Create a new tag
+POST https://localhost:7000/api/tags
+Content-Type: application/json
+
+{
+  "name": "Testing",
+  "description": "Testing related tasks"
+}
+
+### Create a new task
+POST https://localhost:7000/api/usertasks
+Content-Type: application/json
+
+{
+  "title": "Test Task",
+  "description": "This is a test task created via API",
+  "dueDate": "2024-12-31T23:59:59Z",
+  "priority": 2,
+  "fullName": "Test User",
+  "telephone": "+1-555-9999",
+  "email": "test@example.com",
+  "tagIds": [1, 2]
+}
+
+### Get task by ID
+GET https://localhost:7000/api/usertasks/1
+Accept: application/json
+
+### Update task
+PUT https://localhost:7000/api/usertasks/1
+Content-Type: application/json
+
+{
+  "title": "Updated Task Title",
+  "description": "Updated description",
+  "dueDate": "2024-12-31T23:59:59Z",
+  "priority": 3,
+  "fullName": "Updated User",
+  "telephone": "+1-555-8888",
+  "email": "updated@example.com",
+  "tagIds": [1, 3]
+}
+
+### Delete task
+DELETE https://localhost:7000/api/usertasks/1
