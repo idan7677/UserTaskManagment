@@ -57,7 +57,7 @@ const TaskForm = observer(({
         fullName: initialData.fullName || '',
         telephone: initialData.telephone || '',
         email: initialData.email || '',
-        tagIds: initialData.tags || []
+        tags: initialData.tags || []
       });
 
       if (initialData.tags) {
@@ -70,14 +70,14 @@ const TaskForm = observer(({
   const handleTagChange = (selectedOptions) => {
     setSelectedTags(selectedOptions || []);
     const tagIds = selectedOptions ? selectedOptions.map(option => option.value) : [];
-    setValue('tagIds', tagIds);
+    setValue('tags', tagIds);
   };
 
   const onFormSubmit = (data) => {
     const formattedData = {
       ...data,
       dueDate: formatDate(data.dueDate),
-      tagIds: selectedTags.map(tag => tag.value)
+      tags: selectedTags.map(tag => tag.value)
     };
     onSubmit(formattedData);
   };
@@ -85,12 +85,12 @@ const TaskForm = observer(({
   const customSelectStyles = {
     control: (provided, state) => ({
       ...provided,
-      borderColor: errors.tagIds ? '#ef4444' : '#d1d5db',
+      borderColor: errors.tags ? '#ef4444' : '#d1d5db',
       '&:hover': {
-        borderColor: errors.tagIds ? '#ef4444' : '#9ca3af'
+        borderColor: errors.tags ? '#ef4444' : '#9ca3af'
       },
       boxShadow: state.isFocused 
-        ? errors.tagIds 
+        ? errors.tags 
           ? '0 0 0 1px #ef4444' 
           : '0 0 0 1px #3b82f6'
         : provided.boxShadow
@@ -242,8 +242,8 @@ const TaskForm = observer(({
             isLoading={tagStore.loading}
             noOptionsMessage={() => "No tags available"}
           />
-          {errors.tagIds && (
-            <p className="text-sm text-red-600 mt-1">{errors.tagIds.message}</p>
+          {errors.tags && (
+            <p className="text-sm text-red-600 mt-1">{errors.tags.message}</p>
           )}
         </div>
       </div>

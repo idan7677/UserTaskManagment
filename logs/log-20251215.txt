@@ -1,0 +1,1263 @@
+2025-12-15 17:08:27.565 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-15 17:08:27.613 +02:00 [INF] Database already exists.
+2025-12-15 17:08:27.865 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Tags] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-15 17:08:27.877 +02:00 [INF] Database initialization completed successfully.
+2025-12-15 17:08:28.154 +02:00 [INF] RabbitMQ connection established
+2025-12-15 17:08:28.155 +02:00 [INF] RabbitMQ service initialized successfully
+2025-12-15 17:08:28.271 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+FROM [UserTasks] AS [u]
+WHERE [u].[DueDate] < GETUTCDATE()
+2025-12-15 17:08:28.345 +02:00 [INF] Found 3 overdue tasks to process
+2025-12-15 17:08:28.361 +02:00 [INF] Now listening on: http://localhost:5107
+2025-12-15 17:08:28.363 +02:00 [INF] Message published to queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:08:28.3484308Z","ProcessedAt":null}
+2025-12-15 17:08:28.367 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-15 17:08:28.368 +02:00 [INF] Reminder inserted into queue for overdue task 2: Fix Login Bug
+2025-12-15 17:08:28.369 +02:00 [INF] Hosting environment: Development
+2025-12-15 17:08:28.372 +02:00 [INF] Content root path: C:\Users\Idanbh\Documents\Projects\UserTaskManagment\UserTaskManagment
+2025-12-15 17:08:28.374 +02:00 [INF] Message published to queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:08:28.3715546Z","ProcessedAt":null}
+2025-12-15 17:08:28.378 +02:00 [INF] Reminder inserted into queue for overdue task 3: Team Meeting Preparation
+2025-12-15 17:08:28.383 +02:00 [INF] Message published to queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:08:28.381931Z","ProcessedAt":null}
+2025-12-15 17:08:28.386 +02:00 [INF] Reminder inserted into queue for overdue task 4: sdfsdf
+2025-12-15 17:08:28.389 +02:00 [INF] Hi your Task is due Task Fix Login Bug
+2025-12-15 17:08:28.391 +02:00 [INF] Processed reminder for Task 2 - Fix Login Bug (Due: "2025-12-10T09:52:33.2310521")
+2025-12-15 17:08:28.398 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:08:28.3484308Z","ProcessedAt":null}
+2025-12-15 17:08:28.400 +02:00 [INF] Hi your Task is due Task Team Meeting Preparation
+2025-12-15 17:08:28.401 +02:00 [INF] Processed reminder for Task 3 - Team Meeting Preparation (Due: "2025-12-14T09:52:33.2310525")
+2025-12-15 17:08:28.403 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:08:28.3715546Z","ProcessedAt":null}
+2025-12-15 17:08:28.404 +02:00 [INF] Hi your Task is due Task sdfsdf
+2025-12-15 17:08:28.405 +02:00 [INF] Processed reminder for Task 4 - sdfsdf (Due: "2025-12-15T00:00:00.0000000")
+2025-12-15 17:08:28.406 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:08:28.381931Z","ProcessedAt":null}
+2025-12-15 17:09:12.137 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:09:12.137 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:09:12.189 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-12-15 17:09:12.197 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:12.197 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:12.208 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.208 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.233 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:09:12.233 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:09:12.478 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:09:12.520 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:12.577 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 333.0218ms
+2025-12-15 17:09:12.578 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:09:12.585 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.594 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:12.596 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.599 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:09:12.604 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 468.0751ms
+2025-12-15 17:09:12.610 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:09:12.620 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:12.625 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 21.8721ms
+2025-12-15 17:09:12.630 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.633 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 55.1125ms
+2025-12-15 17:09:12.656 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:09:12.714 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:12.734 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 498.1175ms
+2025-12-15 17:09:12.736 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:09:12.737 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.745 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:12.747 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 611.7476ms
+2025-12-15 17:09:12.749 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.761 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:09:12.769 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:09:12.781 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:12.789 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 24.376ms
+2025-12-15 17:09:12.797 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:09:12.801 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.808 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:12.819 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 82.4449ms
+2025-12-15 17:09:12.822 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.857 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:09:12.892 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:09:12.908 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:12.913 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 46.6231ms
+2025-12-15 17:09:12.919 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:09:12.922 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.931 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:12.934 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 136.7746ms
+2025-12-15 17:09:12.937 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.950 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:09:12.956 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:09:12.967 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:12.970 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 16.8042ms
+2025-12-15 17:09:12.974 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:12.981 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 62.3923ms
+2025-12-15 17:09:15.058 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:09:15.069 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:15.073 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:15.081 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:09:15.105 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:09:15.118 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:15.123 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 24.1413ms
+2025-12-15 17:09:15.129 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:09:15.132 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:15.139 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:09:15.147 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 88.3526ms
+2025-12-15 17:09:15.149 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:15.166 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:09:15.178 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:09:15.185 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:09:15.188 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 16.5126ms
+2025-12-15 17:09:15.195 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:09:15.198 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 68.6663ms
+2025-12-15 17:11:09.234 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:11:09.239 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:09.241 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:09.243 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:11:09.249 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:11:09.254 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:09.256 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 10.7869ms
+2025-12-15 17:11:09.262 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:09.263 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:11:09.265 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 30.7402ms
+2025-12-15 17:11:09.269 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:09.273 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:09.276 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:11:09.282 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:11:09.286 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:09.288 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 9.2764ms
+2025-12-15 17:11:09.290 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:09.294 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 31.1641ms
+2025-12-15 17:11:11.982 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:11:11.983 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:11:11.993 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:11.996 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:11.997 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.000 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.001 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:11:12.004 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:11:12.014 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:11:12.026 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:12.032 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 26.2942ms
+2025-12-15 17:11:12.034 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:11:12.036 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.044 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:12.048 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 66.0454ms
+2025-12-15 17:11:12.050 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:11:12.052 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.065 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:12.065 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:11:12.069 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 55.8293ms
+2025-12-15 17:11:12.072 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:11:12.079 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.084 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:12.086 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 102.6786ms
+2025-12-15 17:11:12.090 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.097 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:11:12.100 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:11:12.112 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:12.116 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 43.5309ms
+2025-12-15 17:11:12.116 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:11:12.120 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:11:12.121 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.129 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:12.139 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:12.146 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 110.9389ms
+2025-12-15 17:11:12.151 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 43.3615ms
+2025-12-15 17:11:12.152 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.160 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.162 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:11:12.163 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 91.5781ms
+2025-12-15 17:11:12.168 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:11:12.177 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:12.180 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 14.4572ms
+2025-12-15 17:11:12.182 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:11:12.182 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.186 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:12.188 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 67.881ms
+2025-12-15 17:11:12.189 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.194 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:11:12.198 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:11:12.203 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:12.205 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 9.6652ms
+2025-12-15 17:11:12.209 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:12.212 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 29.7188ms
+2025-12-15 17:11:20.439 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:11:20.444 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:20.446 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:20.448 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:11:20.453 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:11:20.456 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:20.459 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 8.4326ms
+2025-12-15 17:11:20.462 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:11:20.464 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:20.467 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:11:20.468 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 29.0124ms
+2025-12-15 17:11:20.469 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:20.473 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:11:20.479 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:11:20.482 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:11:20.484 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 7.5874ms
+2025-12-15 17:11:20.486 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:11:20.487 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 25.5411ms
+2025-12-15 17:12:19.727 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:12:19.731 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:12:19.737 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:19.740 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:19.742 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.746 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.750 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:12:19.748 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:12:19.769 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:12:19.776 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:19.778 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:12:19.784 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 30.1505ms
+2025-12-15 17:12:19.789 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:12:19.797 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.797 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:19.801 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:19.803 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 71.7743ms
+2025-12-15 17:12:19.806 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 35.1631ms
+2025-12-15 17:12:19.807 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.818 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:12:19.821 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.823 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:12:19.828 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:19.831 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 103.9133ms
+2025-12-15 17:12:19.837 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.839 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:12:19.849 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:12:19.856 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:19.872 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 37.9795ms
+2025-12-15 17:12:19.873 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:12:19.876 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.884 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 94.5365ms
+2025-12-15 17:12:19.885 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:19.892 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 27.6835ms
+2025-12-15 17:12:19.895 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.895 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:12:19.898 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 79.2606ms
+2025-12-15 17:12:19.901 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:19.906 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.907 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:12:19.921 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:12:19.929 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:19.932 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 14.1436ms
+2025-12-15 17:12:19.936 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:12:19.937 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.940 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:19.941 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 46.57ms
+2025-12-15 17:12:19.942 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.948 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:12:19.954 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:12:19.961 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:19.965 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 13.7378ms
+2025-12-15 17:12:19.970 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:19.972 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 35.841ms
+2025-12-15 17:12:24.586 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:12:24.590 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:24.593 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:24.595 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:12:24.601 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:12:24.604 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:24.606 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 7.5992ms
+2025-12-15 17:12:24.607 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:12:24.609 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:24.613 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:12:24.614 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 27.827ms
+2025-12-15 17:12:24.615 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:24.622 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:12:24.627 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:12:24.632 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:12:24.634 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 10.2317ms
+2025-12-15 17:12:24.637 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:12:24.638 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 30.6635ms
+2025-12-15 17:13:28.392 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+FROM [UserTasks] AS [u]
+WHERE [u].[DueDate] < GETUTCDATE()
+2025-12-15 17:13:28.396 +02:00 [INF] Found 3 overdue tasks to process
+2025-12-15 17:13:28.400 +02:00 [INF] Message published to queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:13:28.3980796Z","ProcessedAt":null}
+2025-12-15 17:13:28.402 +02:00 [INF] Reminder inserted into queue for overdue task 2: Fix Login Bug
+2025-12-15 17:13:28.402 +02:00 [INF] Hi your Task is due Task Fix Login Bug
+2025-12-15 17:13:28.404 +02:00 [INF] Processed reminder for Task 2 - Fix Login Bug (Due: "2025-12-10T09:52:33.2310521")
+2025-12-15 17:13:28.405 +02:00 [INF] Message published to queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:13:28.4035395Z","ProcessedAt":null}
+2025-12-15 17:13:28.406 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:13:28.3980796Z","ProcessedAt":null}
+2025-12-15 17:13:28.407 +02:00 [INF] Reminder inserted into queue for overdue task 3: Team Meeting Preparation
+2025-12-15 17:13:28.408 +02:00 [INF] Hi your Task is due Task Team Meeting Preparation
+2025-12-15 17:13:28.410 +02:00 [INF] Message published to queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:13:28.4098112Z","ProcessedAt":null}
+2025-12-15 17:13:28.411 +02:00 [INF] Processed reminder for Task 3 - Team Meeting Preparation (Due: "2025-12-14T09:52:33.2310525")
+2025-12-15 17:13:28.412 +02:00 [INF] Reminder inserted into queue for overdue task 4: sdfsdf
+2025-12-15 17:13:28.413 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:13:28.4035395Z","ProcessedAt":null}
+2025-12-15 17:13:28.415 +02:00 [INF] Hi your Task is due Task sdfsdf
+2025-12-15 17:13:28.416 +02:00 [INF] Processed reminder for Task 4 - sdfsdf (Due: "2025-12-15T00:00:00.0000000")
+2025-12-15 17:13:28.417 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:13:28.4098112Z","ProcessedAt":null}
+2025-12-15 17:14:07.723 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:14:07.730 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:14:07.733 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:14:07.735 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:14:07.740 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:14:07.747 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:14:07.749 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 11.1889ms
+2025-12-15 17:14:07.751 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:14:07.751 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:14:07.754 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:14:07.755 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 31.7542ms
+2025-12-15 17:14:07.756 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:14:07.760 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:14:07.766 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:14:07.770 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:14:07.771 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 6.5806ms
+2025-12-15 17:14:07.773 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:14:07.774 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 23.5611ms
+2025-12-15 17:15:23.035 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:15:23.037 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:15:23.056 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:15:23.078 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:15:23.097 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:23.103 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:23.105 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:15:23.109 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:15:23.124 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:15:23.134 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:15:23.147 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:15:23.147 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:15:23.158 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 33.5702ms
+2025-12-15 17:15:23.166 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 47.9913ms
+2025-12-15 17:15:23.173 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:15:23.174 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:23.179 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:23.189 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:15:23.193 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 156.5944ms
+2025-12-15 17:15:23.197 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 162.1795ms
+2025-12-15 17:15:23.201 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:23.235 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:15:23.254 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:15:23.272 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:15:23.280 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 38.0671ms
+2025-12-15 17:15:23.287 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:23.293 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 119.9699ms
+2025-12-15 17:15:31.900 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:15:31.907 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:15:31.910 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:31.913 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:15:31.921 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:15:31.927 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:15:31.930 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 12.7702ms
+2025-12-15 17:15:31.932 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:15:31.934 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:31.939 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:15:31.941 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 40.8237ms
+2025-12-15 17:15:31.944 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:31.956 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:15:31.963 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:15:31.970 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:15:31.973 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 13.516ms
+2025-12-15 17:15:31.976 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:15:31.978 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 45.7514ms
+2025-12-15 17:17:09.490 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:17:09.496 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:17:09.499 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:17:09.501 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:17:09.507 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:17:09.511 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:17:09.518 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 13.5418ms
+2025-12-15 17:17:09.523 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:17:09.523 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:17:09.527 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:17:09.528 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 38.831ms
+2025-12-15 17:17:09.533 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:17:09.541 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:17:09.548 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:17:09.554 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:17:09.558 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 13.5833ms
+2025-12-15 17:17:09.561 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:17:09.566 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 42.6263ms
+2025-12-15 17:18:28.423 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+FROM [UserTasks] AS [u]
+WHERE [u].[DueDate] < GETUTCDATE()
+2025-12-15 17:18:28.426 +02:00 [INF] Found 3 overdue tasks to process
+2025-12-15 17:18:28.428 +02:00 [INF] Message published to queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:18:28.4278128Z","ProcessedAt":null}
+2025-12-15 17:18:28.431 +02:00 [INF] Reminder inserted into queue for overdue task 2: Fix Login Bug
+2025-12-15 17:18:28.433 +02:00 [INF] Hi your Task is due Task Fix Login Bug
+2025-12-15 17:18:28.436 +02:00 [INF] Message published to queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:18:28.4339299Z","ProcessedAt":null}
+2025-12-15 17:18:28.436 +02:00 [INF] Processed reminder for Task 2 - Fix Login Bug (Due: "2025-12-10T09:52:33.2310521")
+2025-12-15 17:18:28.438 +02:00 [INF] Reminder inserted into queue for overdue task 3: Team Meeting Preparation
+2025-12-15 17:18:28.441 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:18:28.4278128Z","ProcessedAt":null}
+2025-12-15 17:18:28.443 +02:00 [INF] Message published to queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:18:28.4427278Z","ProcessedAt":null}
+2025-12-15 17:18:28.444 +02:00 [INF] Hi your Task is due Task Team Meeting Preparation
+2025-12-15 17:18:28.445 +02:00 [INF] Reminder inserted into queue for overdue task 4: sdfsdf
+2025-12-15 17:18:28.446 +02:00 [INF] Processed reminder for Task 3 - Team Meeting Preparation (Due: "2025-12-14T09:52:33.2310525")
+2025-12-15 17:18:28.449 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:18:28.4339299Z","ProcessedAt":null}
+2025-12-15 17:18:28.450 +02:00 [INF] Hi your Task is due Task sdfsdf
+2025-12-15 17:18:28.452 +02:00 [INF] Processed reminder for Task 4 - sdfsdf (Due: "2025-12-15T00:00:00.0000000")
+2025-12-15 17:18:28.453 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:18:28.4427278Z","ProcessedAt":null}
+2025-12-15 17:18:49.654 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:18:49.660 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:18:49.661 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:18:49.667 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:18:49.672 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:18:49.677 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:18:49.684 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 13.7381ms
+2025-12-15 17:18:49.689 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:18:49.690 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:18:49.691 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 37.4773ms
+2025-12-15 17:18:49.695 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:18:49.702 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:18:49.706 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:18:49.712 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:18:49.719 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:18:49.722 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 12.4542ms
+2025-12-15 17:18:49.725 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:18:49.728 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 37.8741ms
+2025-12-15 17:22:51.631 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:22:51.637 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:51.655 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.655 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:22:51.659 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:22:51.664 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:51.682 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.688 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:22:51.692 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:22:51.701 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:51.706 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 28.8471ms
+2025-12-15 17:22:51.708 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:22:51.709 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:22:51.710 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.716 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:51.722 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:51.725 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 93.8433ms
+2025-12-15 17:22:51.727 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 35.6295ms
+2025-12-15 17:22:51.728 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.736 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:22:51.738 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.740 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:22:51.742 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:51.744 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 88.3384ms
+2025-12-15 17:22:51.759 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.761 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:22:51.769 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:22:51.777 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:51.779 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:22:51.779 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 24.3343ms
+2025-12-15 17:22:51.785 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:22:51.791 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.792 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:51.796 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:51.822 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 112.4266ms
+2025-12-15 17:22:51.825 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 47.9424ms
+2025-12-15 17:22:51.827 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.841 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.842 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:22:51.843 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 107.5809ms
+2025-12-15 17:22:51.852 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:22:51.856 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:51.859 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 13.9939ms
+2025-12-15 17:22:51.861 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:22:51.861 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.869 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:51.870 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 85.5207ms
+2025-12-15 17:22:51.874 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.885 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:22:51.891 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:22:51.894 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:51.896 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 7.4977ms
+2025-12-15 17:22:51.900 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:51.903 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 41.6888ms
+2025-12-15 17:22:55.078 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:22:55.082 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:55.083 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:55.085 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:22:55.089 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:22:55.092 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:55.094 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 6.8722ms
+2025-12-15 17:22:55.095 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:22:55.097 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:55.102 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:22:55.104 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 26.216ms
+2025-12-15 17:22:55.105 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:55.109 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:22:55.112 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:22:55.117 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:22:55.118 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 7.631ms
+2025-12-15 17:22:55.122 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:22:55.123 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 28.2194ms
+2025-12-15 17:23:09.857 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks - null null
+2025-12-15 17:23:09.862 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:23:09.866 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks - 204 null null 8.5786ms
+2025-12-15 17:23:09.871 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5107/api/usertasks - application/json 193
+2025-12-15 17:23:09.874 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:23:09.875 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment)'
+2025-12-15 17:23:09.885 +02:00 [INF] Route matched with {action = "Create", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]] Create(UserTaskManagment.Models.DTOs.CreateUserTaskDto) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:23:10.037 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:23:10.067 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 1000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (Size = 100), @p5='?' (DbType = Int32), @p6='?' (Size = 20), @p7='?' (Size = 200), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserTasks] ([CreatedAt], [Description], [DueDate], [Email], [FullName], [Priority], [Telephone], [Title], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-12-15 17:23:10.109 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:23:10.119 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'UserTaskManagment.Models.DTOs.UserTaskResponseDto'.
+2025-12-15 17:23:10.128 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment) in 240.36ms
+2025-12-15 17:23:10.130 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment)'
+2025-12-15 17:23:10.132 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5107/api/usertasks - 201 null application/json; charset=utf-8 261.117ms
+2025-12-15 17:23:28.465 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+FROM [UserTasks] AS [u]
+WHERE [u].[DueDate] < GETUTCDATE()
+2025-12-15 17:23:28.472 +02:00 [INF] Found 3 overdue tasks to process
+2025-12-15 17:23:28.476 +02:00 [INF] Message published to queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:23:28.4745158Z","ProcessedAt":null}
+2025-12-15 17:23:28.479 +02:00 [INF] Reminder inserted into queue for overdue task 2: Fix Login Bug
+2025-12-15 17:23:28.484 +02:00 [INF] Hi your Task is due Task Fix Login Bug
+2025-12-15 17:23:28.486 +02:00 [INF] Message published to queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:23:28.4853814Z","ProcessedAt":null}
+2025-12-15 17:23:28.487 +02:00 [INF] Processed reminder for Task 2 - Fix Login Bug (Due: "2025-12-10T09:52:33.2310521")
+2025-12-15 17:23:28.489 +02:00 [INF] Reminder inserted into queue for overdue task 3: Team Meeting Preparation
+2025-12-15 17:23:28.492 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:23:28.4745158Z","ProcessedAt":null}
+2025-12-15 17:23:28.495 +02:00 [INF] Message published to queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:23:28.4936206Z","ProcessedAt":null}
+2025-12-15 17:23:28.495 +02:00 [INF] Hi your Task is due Task Team Meeting Preparation
+2025-12-15 17:23:28.497 +02:00 [INF] Reminder inserted into queue for overdue task 4: sdfsdf
+2025-12-15 17:23:28.498 +02:00 [INF] Processed reminder for Task 3 - Team Meeting Preparation (Due: "2025-12-14T09:52:33.2310525")
+2025-12-15 17:23:28.501 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:23:28.4853814Z","ProcessedAt":null}
+2025-12-15 17:23:28.502 +02:00 [INF] Hi your Task is due Task sdfsdf
+2025-12-15 17:23:28.503 +02:00 [INF] Processed reminder for Task 4 - sdfsdf (Due: "2025-12-15T00:00:00.0000000")
+2025-12-15 17:23:28.504 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:23:28.4936206Z","ProcessedAt":null}
+2025-12-15 17:23:59.841 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:23:59.844 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:23:59.845 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:23:59.847 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:23:59.855 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:23:59.858 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:23:59.860 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 6.391ms
+2025-12-15 17:23:59.862 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:23:59.862 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:23:59.867 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:23:59.868 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 27.1484ms
+2025-12-15 17:23:59.871 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:23:59.877 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:23:59.884 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:23:59.888 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:23:59.890 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 9.4977ms
+2025-12-15 17:23:59.892 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:23:59.894 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 32.0047ms
+2025-12-15 17:24:27.783 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks - null null
+2025-12-15 17:24:27.788 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:27.789 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks - 204 null null 5.9911ms
+2025-12-15 17:24:27.795 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5107/api/usertasks - application/json 183
+2025-12-15 17:24:27.800 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:27.802 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment)'
+2025-12-15 17:24:27.804 +02:00 [INF] Route matched with {action = "Create", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]] Create(UserTaskManagment.Models.DTOs.CreateUserTaskDto) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:24:27.822 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:24:27.824 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 1000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (Size = 100), @p5='?' (DbType = Int32), @p6='?' (Size = 20), @p7='?' (Size = 200), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserTasks] ([CreatedAt], [Description], [DueDate], [Email], [FullName], [Priority], [Telephone], [Title], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-12-15 17:24:27.836 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:24:27.838 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'UserTaskManagment.Models.DTOs.UserTaskResponseDto'.
+2025-12-15 17:24:27.840 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment) in 33.9693ms
+2025-12-15 17:24:27.842 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment)'
+2025-12-15 17:24:27.843 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5107/api/usertasks - 201 null application/json; charset=utf-8 47.4268ms
+2025-12-15 17:24:34.599 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/10 - null null
+2025-12-15 17:24:34.603 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:34.604 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/10 - 204 null null 4.876ms
+2025-12-15 17:24:34.608 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5107/api/usertasks/10 - null null
+2025-12-15 17:24:34.611 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:34.612 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Delete (UserTaskManagment)'
+2025-12-15 17:24:34.619 +02:00 [INF] Route matched with {action = "Delete", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:24:34.625 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:24:34.644 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [UserTasks]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-12-15 17:24:34.655 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-12-15 17:24:34.656 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Delete (UserTaskManagment) in 34.8394ms
+2025-12-15 17:24:34.658 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Delete (UserTaskManagment)'
+2025-12-15 17:24:34.659 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5107/api/usertasks/10 - 204 null null 50.641ms
+2025-12-15 17:24:37.703 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:24:37.707 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:37.709 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:37.710 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:24:37.725 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:24:37.730 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:24:37.732 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 9.1908ms
+2025-12-15 17:24:37.734 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:24:37.736 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:37.741 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:37.741 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 38.7792ms
+2025-12-15 17:24:37.742 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:37.747 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:24:37.752 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:24:37.755 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:24:37.757 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 7.3562ms
+2025-12-15 17:24:37.758 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:37.760 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 25.3571ms
+2025-12-15 17:24:44.525 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/11 - null null
+2025-12-15 17:24:44.532 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:44.535 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/11 - 204 null null 9.733ms
+2025-12-15 17:24:44.543 +02:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5107/api/usertasks/11 - application/json 180
+2025-12-15 17:24:44.546 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:44.548 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:24:44.556 +02:00 [INF] Route matched with {action = "Update", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]] Update(Int32, UserTaskManagment.Models.DTOs.UpdateUserTaskDto) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:24:44.570 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:24:44.575 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:24:44.579 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 1000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (Size = 100), @p5='?' (DbType = Int32), @p6='?' (Size = 20), @p7='?' (Size = 200), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [UserTasks] SET [CreatedAt] = @p0, [Description] = @p1, [DueDate] = @p2, [Email] = @p3, [FullName] = @p4, [Priority] = @p5, [Telephone] = @p6, [Title] = @p7, [UpdatedAt] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2025-12-15 17:24:44.592 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:24:44.595 +02:00 [INF] Executing OkObjectResult, writing value of type 'UserTaskManagment.Models.DTOs.UserTaskResponseDto'.
+2025-12-15 17:24:44.596 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment) in 38.4688ms
+2025-12-15 17:24:44.600 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:24:44.601 +02:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5107/api/usertasks/11 - 200 null application/json; charset=utf-8 58.3394ms
+2025-12-15 17:24:52.072 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:24:52.077 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:52.079 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:52.081 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:24:52.086 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:24:52.089 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:24:52.091 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 6.4702ms
+2025-12-15 17:24:52.093 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:24:52.094 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:52.101 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:52.102 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 30.0854ms
+2025-12-15 17:24:52.104 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:52.108 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:24:52.111 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:24:52.115 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:24:52.118 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 8.1485ms
+2025-12-15 17:24:52.119 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:24:52.121 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 27.8879ms
+2025-12-15 17:24:56.290 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/11 - null null
+2025-12-15 17:24:56.295 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:56.300 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/11 - 204 null null 10.2254ms
+2025-12-15 17:24:56.306 +02:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5107/api/usertasks/11 - application/json 180
+2025-12-15 17:24:56.309 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:24:56.310 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:24:56.311 +02:00 [INF] Route matched with {action = "Update", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]] Update(Int32, UserTaskManagment.Models.DTOs.UpdateUserTaskDto) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:24:56.318 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:24:56.321 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:24:56.323 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 1000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (Size = 100), @p5='?' (DbType = Int32), @p6='?' (Size = 20), @p7='?' (Size = 200), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [UserTasks] SET [CreatedAt] = @p0, [Description] = @p1, [DueDate] = @p2, [Email] = @p3, [FullName] = @p4, [Priority] = @p5, [Telephone] = @p6, [Title] = @p7, [UpdatedAt] = @p8
+OUTPUT 1
+WHERE [Id] = @p9;
+2025-12-15 17:24:56.327 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:24:56.330 +02:00 [INF] Executing OkObjectResult, writing value of type 'UserTaskManagment.Models.DTOs.UserTaskResponseDto'.
+2025-12-15 17:24:56.333 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment) in 20.4906ms
+2025-12-15 17:24:56.334 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:24:56.335 +02:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5107/api/usertasks/11 - 200 null application/json; charset=utf-8 29.1181ms
+2025-12-15 17:27:36.695 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:27:36.699 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:36.700 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:36.701 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:27:36.705 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:27:36.709 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:36.711 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 7.5508ms
+2025-12-15 17:27:36.715 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/usertasks - null null
+2025-12-15 17:27:36.716 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:36.719 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:36.720 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 25.4895ms
+2025-12-15 17:27:36.721 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:36.727 +02:00 [INF] Route matched with {action = "GetAll", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]]] GetAll() on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:27:36.734 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM [UserTasks] AS [u]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u].[Id] = [s].[UserTaskId]
+ORDER BY [u].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:27:36.739 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.UserTaskResponseDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:36.741 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment) in 11.8196ms
+2025-12-15 17:27:36.743 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:36.745 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/usertasks - 200 null application/json; charset=utf-8 29.9318ms
+2025-12-15 17:27:39.103 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:39.107 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:39.107 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:39.109 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:39.115 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:39.119 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:39.120 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 9.4004ms
+2025-12-15 17:27:39.122 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:39.123 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:39.126 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:39.128 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 24.977ms
+2025-12-15 17:27:39.130 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:39.141 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:39.146 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:39.152 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:39.154 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 9.5885ms
+2025-12-15 17:27:39.157 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:39.159 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 36.7979ms
+2025-12-15 17:27:41.916 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:41.920 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:41.922 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:41.923 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:41.928 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:41.932 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:41.934 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 7.8984ms
+2025-12-15 17:27:41.936 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:41.936 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:41.940 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:41.941 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 24.4058ms
+2025-12-15 17:27:41.942 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:41.945 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:41.952 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:41.955 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:41.957 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 8.5689ms
+2025-12-15 17:27:41.959 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:41.961 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 25.1827ms
+2025-12-15 17:27:48.961 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/11 - null null
+2025-12-15 17:27:48.966 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:48.967 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/11 - 204 null null 5.6511ms
+2025-12-15 17:27:48.972 +02:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5107/api/usertasks/11 - application/json 181
+2025-12-15 17:27:48.975 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:48.976 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:27:48.977 +02:00 [INF] Route matched with {action = "Update", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]] Update(Int32, UserTaskManagment.Models.DTOs.UpdateUserTaskDto) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:27:48.987 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:27:49.026 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+WHERE [t].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__ids_0) WITH ([value] int '$') AS [i]
+)
+2025-12-15 17:27:49.042 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:27:49.049 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p11='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 1000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 20), @p9='?' (Size = 200), @p10='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserTaskTags] ([TagId], [UserTaskId])
+VALUES (@p0, @p1);
+UPDATE [UserTasks] SET [CreatedAt] = @p2, [Description] = @p3, [DueDate] = @p4, [Email] = @p5, [FullName] = @p6, [Priority] = @p7, [Telephone] = @p8, [Title] = @p9, [UpdatedAt] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+2025-12-15 17:27:49.053 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:27:49.056 +02:00 [INF] Executing OkObjectResult, writing value of type 'UserTaskManagment.Models.DTOs.UserTaskResponseDto'.
+2025-12-15 17:27:49.057 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment) in 77.584ms
+2025-12-15 17:27:49.059 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:27:49.060 +02:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5107/api/usertasks/11 - 200 null application/json; charset=utf-8 88.1295ms
+2025-12-15 17:27:50.781 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:50.786 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:50.794 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:50.795 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:50.803 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:50.807 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:50.809 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 9.5581ms
+2025-12-15 17:27:50.811 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:50.811 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:50.815 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:50.818 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:50.818 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 36.9861ms
+2025-12-15 17:27:50.821 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:50.829 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:50.834 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:50.837 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 9.6881ms
+2025-12-15 17:27:50.839 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:50.841 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 30.1546ms
+2025-12-15 17:27:53.364 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:53.368 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:53.369 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:53.371 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:53.375 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:53.378 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:53.380 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 7.0588ms
+2025-12-15 17:27:53.384 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:27:53.385 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:53.388 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:27:53.390 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 26.2285ms
+2025-12-15 17:27:53.391 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:53.395 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:27:53.401 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:27:53.403 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:27:53.406 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 8.5245ms
+2025-12-15 17:27:53.408 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:27:53.409 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 24.6879ms
+2025-12-15 17:28:10.668 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks - null null
+2025-12-15 17:28:10.672 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:28:10.673 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks - 204 null null 5.1935ms
+2025-12-15 17:28:10.677 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5107/api/usertasks - application/json 184
+2025-12-15 17:28:10.679 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:28:10.682 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment)'
+2025-12-15 17:28:10.684 +02:00 [INF] Route matched with {action = "Create", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]] Create(UserTaskManagment.Models.DTOs.CreateUserTaskDto) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:28:10.690 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:28:10.691 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 1000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 100), @p4='?' (Size = 100), @p5='?' (DbType = Int32), @p6='?' (Size = 20), @p7='?' (Size = 200), @p8='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserTasks] ([CreatedAt], [Description], [DueDate], [Email], [FullName], [Priority], [Telephone], [Title], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-12-15 17:28:10.695 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+WHERE [t].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__ids_0) WITH ([value] int '$') AS [i]
+)
+2025-12-15 17:28:10.699 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:28:10.702 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserTaskTags] ([TagId], [UserTaskId])
+VALUES (@p0, @p1);
+2025-12-15 17:28:10.706 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:28:10.709 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'UserTaskManagment.Models.DTOs.UserTaskResponseDto'.
+2025-12-15 17:28:10.710 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment) in 23.1992ms
+2025-12-15 17:28:10.712 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Create (UserTaskManagment)'
+2025-12-15 17:28:10.714 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5107/api/usertasks - 201 null application/json; charset=utf-8 36.5933ms
+2025-12-15 17:28:13.785 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:28:13.789 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:28:13.790 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:28:13.792 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:28:13.796 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:28:13.800 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:28:13.802 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 7.6194ms
+2025-12-15 17:28:13.804 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5107/api/tags - null null
+2025-12-15 17:28:13.804 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:28:13.809 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:28:13.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 24.87ms
+2025-12-15 17:28:13.811 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:28:13.814 +02:00 [INF] Route matched with {action = "GetAll", controller = "Tags"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[UserTaskManagment.Models.DTOs.TagDto]]] GetAll() on controller UserTaskManagment.Controllers.TagsController (UserTaskManagment).
+2025-12-15 17:28:13.819 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+2025-12-15 17:28:13.822 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserTaskManagment.Models.DTOs.TagDto, UserTaskManagment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-15 17:28:13.825 +02:00 [INF] Executed action UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment) in 8.3018ms
+2025-12-15 17:28:13.827 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.TagsController.GetAll (UserTaskManagment)'
+2025-12-15 17:28:13.828 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5107/api/tags - 200 null application/json; charset=utf-8 24.0936ms
+2025-12-15 17:28:20.655 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/12 - null null
+2025-12-15 17:28:20.659 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:28:20.660 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5107/api/usertasks/12 - 204 null null 4.9697ms
+2025-12-15 17:28:20.667 +02:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5107/api/usertasks/12 - application/json 184
+2025-12-15 17:28:20.671 +02:00 [INF] CORS policy execution successful.
+2025-12-15 17:28:20.671 +02:00 [INF] Executing endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:28:20.673 +02:00 [INF] Route matched with {action = "Update", controller = "UserTasks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[UserTaskManagment.Models.DTOs.UserTaskResponseDto]] Update(Int32, UserTaskManagment.Models.DTOs.UpdateUserTaskDto) on controller UserTaskManagment.Controllers.UserTasksController (UserTaskManagment).
+2025-12-15 17:28:20.677 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:28:20.681 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+FROM [Tags] AS [t]
+WHERE [t].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__ids_0) WITH ([value] int '$') AS [i]
+)
+2025-12-15 17:28:20.690 +02:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2025-12-15 17:28:20.694 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p11='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (Size = 1000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 100), @p6='?' (Size = 100), @p7='?' (DbType = Int32), @p8='?' (Size = 20), @p9='?' (Size = 200), @p10='?' (DbType = DateTime2), @p12='?' (DbType = Int32), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [UserTaskTags]
+OUTPUT 1
+WHERE [TagId] = @p0 AND [UserTaskId] = @p1;
+UPDATE [UserTasks] SET [CreatedAt] = @p2, [Description] = @p3, [DueDate] = @p4, [Email] = @p5, [FullName] = @p6, [Priority] = @p7, [Telephone] = @p8, [Title] = @p9, [UpdatedAt] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+INSERT INTO [UserTaskTags] ([TagId], [UserTaskId])
+VALUES (@p12, @p13);
+2025-12-15 17:28:20.707 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u1].[Id], [u1].[CreatedAt], [u1].[Description], [u1].[DueDate], [u1].[Email], [u1].[FullName], [u1].[Priority], [u1].[Telephone], [u1].[Title], [u1].[UpdatedAt], [s].[UserTaskId], [s].[TagId], [s].[Id], [s].[CreatedAt], [s].[Description], [s].[Name]
+FROM (
+    SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+    FROM [UserTasks] AS [u]
+    WHERE [u].[Id] = @__id_0
+) AS [u1]
+LEFT JOIN (
+    SELECT [u0].[UserTaskId], [u0].[TagId], [t].[Id], [t].[CreatedAt], [t].[Description], [t].[Name]
+    FROM [UserTaskTags] AS [u0]
+    INNER JOIN [Tags] AS [t] ON [u0].[TagId] = [t].[Id]
+) AS [s] ON [u1].[Id] = [s].[UserTaskId]
+ORDER BY [u1].[Id], [s].[UserTaskId], [s].[TagId]
+2025-12-15 17:28:20.710 +02:00 [INF] Executing OkObjectResult, writing value of type 'UserTaskManagment.Models.DTOs.UserTaskResponseDto'.
+2025-12-15 17:28:20.711 +02:00 [INF] Executed action UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment) in 37.0516ms
+2025-12-15 17:28:20.713 +02:00 [INF] Executed endpoint 'UserTaskManagment.Controllers.UserTasksController.Update (UserTaskManagment)'
+2025-12-15 17:28:20.717 +02:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5107/api/usertasks/12 - 200 null application/json; charset=utf-8 48.8834ms
+2025-12-15 17:28:28.502 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[Description], [u].[DueDate], [u].[Email], [u].[FullName], [u].[Priority], [u].[Telephone], [u].[Title], [u].[UpdatedAt]
+FROM [UserTasks] AS [u]
+WHERE [u].[DueDate] < GETUTCDATE()
+2025-12-15 17:28:28.505 +02:00 [INF] Found 3 overdue tasks to process
+2025-12-15 17:28:28.508 +02:00 [INF] Message published to queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:28:28.5072728Z","ProcessedAt":null}
+2025-12-15 17:28:28.509 +02:00 [INF] Reminder inserted into queue for overdue task 2: Fix Login Bug
+2025-12-15 17:28:28.510 +02:00 [INF] Hi your Task is due Task Fix Login Bug
+2025-12-15 17:28:28.511 +02:00 [INF] Message published to queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:28:28.5109867Z","ProcessedAt":null}
+2025-12-15 17:28:28.512 +02:00 [INF] Processed reminder for Task 2 - Fix Login Bug (Due: "2025-12-10T09:52:33.2310521")
+2025-12-15 17:28:28.513 +02:00 [INF] Reminder inserted into queue for overdue task 3: Team Meeting Preparation
+2025-12-15 17:28:28.517 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":2,"Title":"Fix Login Bug","FullName":"Jane Smith","Email":"jane.smith@example.com","DueDate":"2025-12-10T09:52:33.2310521","CreatedAt":"2025-12-15T15:28:28.5072728Z","ProcessedAt":null}
+2025-12-15 17:28:28.520 +02:00 [INF] Message published to queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:28:28.5190797Z","ProcessedAt":null}
+2025-12-15 17:28:28.520 +02:00 [INF] Hi your Task is due Task Team Meeting Preparation
+2025-12-15 17:28:28.521 +02:00 [INF] Reminder inserted into queue for overdue task 4: sdfsdf
+2025-12-15 17:28:28.521 +02:00 [INF] Processed reminder for Task 3 - Team Meeting Preparation (Due: "2025-12-14T09:52:33.2310525")
+2025-12-15 17:28:28.524 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":3,"Title":"Team Meeting Preparation","FullName":"Bob Johnson","Email":"bob.johnson@example.com","DueDate":"2025-12-14T09:52:33.2310525","CreatedAt":"2025-12-15T15:28:28.5109867Z","ProcessedAt":null}
+2025-12-15 17:28:28.525 +02:00 [INF] Hi your Task is due Task sdfsdf
+2025-12-15 17:28:28.526 +02:00 [INF] Processed reminder for Task 4 - sdfsdf (Due: "2025-12-15T00:00:00.0000000")
+2025-12-15 17:28:28.527 +02:00 [INF] Message processed from queue task-reminders: {"TaskId":4,"Title":"sdfsdf","FullName":"Dan Cohen","Email":"kasdas@gmail.co","DueDate":"2025-12-15T00:00:00","CreatedAt":"2025-12-15T15:28:28.5190797Z","ProcessedAt":null}
+2025-12-15 17:29:29.598 +02:00 [INF] Application is shutting down...

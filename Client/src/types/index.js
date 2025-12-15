@@ -23,7 +23,7 @@ export const createUserTaskDto = (data) => ({
   fullName: data.fullName,
   telephone: data.telephone,
   email: data.email,
-  tagIds: data.tagIds || []
+  tagIds: data.tags || []
 });
 
 export const createUpdateUserTaskDto = (data) => ({
@@ -34,7 +34,7 @@ export const createUpdateUserTaskDto = (data) => ({
   fullName: data.fullName,
   telephone: data.telephone,
   email: data.email,
-  tagIds: data.tagIds || []
+  tagIds: data.tags || []
 });
 
 export const createTagDto = (name) => ({

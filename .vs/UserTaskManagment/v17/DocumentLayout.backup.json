@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\validators\\createusertaskdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:validators\\createusertaskdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|solutionrelative:controllers\\usertaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19B19457-0349-4AF9-B456-25CE43F93969}|UserTaskManagment.csproj|c:\\users\\idanbh\\documents\\projects\\usertaskmanagment\\usertaskmanagment\\validators\\createtagdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -111,19 +115,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAAAKkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-14T22:43:56.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CreateUserTaskDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Validators\\CreateUserTaskDtoValidator.cs",
               "RelativeDocumentMoniker": "Validators\\CreateUserTaskDtoValidator.cs",
               "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Validators\\CreateUserTaskDtoValidator.cs",
               "RelativeToolTip": "Validators\\CreateUserTaskDtoValidator.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBMAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T10:42:09.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-12T10:42:09.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UserTaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\Repositories\\UserTaskRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\UserTaskRepository.cs",
@@ -135,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TagDto.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Models\\DTOs\\TagDto.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\TagDto.cs",
@@ -147,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TagRepository.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\Repositories\\TagRepository.cs",
               "RelativeDocumentMoniker": "Data\\Repositories\\TagRepository.cs",
@@ -159,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TagsController.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Controllers\\TagsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TagsController.cs",
@@ -171,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TaskReminderService.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Services\\BackgroundServices\\TaskReminderService.cs",
               "RelativeDocumentMoniker": "Services\\BackgroundServices\\TaskReminderService.cs",
@@ -183,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Mappings\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Mappings\\MappingProfile.cs",
@@ -195,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Data\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Data\\UnitOfWork.cs",
@@ -207,19 +223,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserTasksController.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Controllers\\UserTasksController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserTasksController.cs",
               "ToolTip": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Controllers\\UserTasksController.cs",
               "RelativeToolTip": "Controllers\\UserTasksController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T17:24:05.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -227,12 +243,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-10T21:00:12.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-10T21:00:12.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CreateTagDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Validators\\CreateTagDtoValidator.cs",
               "RelativeDocumentMoniker": "Validators\\CreateTagDtoValidator.cs",
@@ -244,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UserTaskService.cs",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\Services\\UserTaskService.cs",
               "RelativeDocumentMoniker": "Services\\UserTaskService.cs",
@@ -256,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserTaskManagment.http",
               "DocumentMoniker": "C:\\Users\\Idanbh\\Documents\\Projects\\UserTaskManagment\\UserTaskManagment\\UserTaskManagment.http",
               "RelativeDocumentMoniker": "UserTaskManagment.http",
